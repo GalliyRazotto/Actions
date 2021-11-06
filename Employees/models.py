@@ -6,7 +6,3 @@ from django.db import models
 class Person(models.Model):
     firstName = models.TextField()
     lastName = models.TextField()
-
-
-def test_functions():
-    return True

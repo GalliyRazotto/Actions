@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Person, test_functions
+from .models import Person
 # Create your tests here.
 
 
@@ -9,8 +9,8 @@ class TestPerson(TestCase):
                                             lastName='Popov')
 
     def test_test_function(self):
-        res = test_functions()
-        self.assertTrue(res)
+        res = self.person
+        self.assertTrue(isinstance(res, Person))
 
     def tearDown(self):
         self.person.delete()
